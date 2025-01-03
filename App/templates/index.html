@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static',filename='styles/index.css') }}">   
+    <title>Document</title>
+</head>
+<body style="background-color: #0D131D; color: white; margin: 0; min-height: 100vh;">
+
+    <nav>
+        <h3>NLP</h3>
+    </nav>
+    
+    <div class="content">
+        
+        <div style="display: flex; flex-direction: column;gap: 7px; margin-top: 24px; min-width: 50vw;">
+            
+            <form action="/" method="get">
+                <input type="text" name="prompt" id="prompt" value="{{prompt}}">
+            </form>
+
+        </div>
+
+        <div style="display: flex; gap: 40px; margin-top: 20px;">
+            <div style="display: flex; gap: 40px; margin-top: 20px;">
+                <form action="/" method="get">
+                    <input type="hidden" name="prompt" value="{{prompt}}">
+                    <button id="prompt" type="submit" name="append" value="{{one}}">{{one}}</button>
+                </form>
+            
+                <form action="/" method="get">
+                    <input type="hidden" name="prompt" value="{{prompt}}">
+                    <button id="prompt" type="submit" name="append" value="{{two}}">{{two}}</button>
+                </form>
+            
+                <form action="/" method="get">
+                    <input type="hidden" name="prompt" value="{{prompt}}">
+                    <button id="prompt" type="submit" name="append" value="{{three}}">{{three}}</button>
+                </form>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
